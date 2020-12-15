@@ -1,10 +1,9 @@
 import express from 'express';
+import { getPosts } from '../controllers/posts.js';
 
 // set up router
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send("Welcome to LeanBean.")
-})
+router.get('/', getPosts);
 
 export default router;
